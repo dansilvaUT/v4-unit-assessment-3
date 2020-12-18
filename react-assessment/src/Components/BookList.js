@@ -7,7 +7,7 @@ const BookList = props => {
         </section>
     }) 
     return (
-        <section>
+        <section className="books">
             {mappedBooks}
         </section>
     )

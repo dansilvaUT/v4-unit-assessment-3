@@ -2,9 +2,39 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-components {
+  background-color: whitesmoke;
+  box-shadow: inset 0px 5px 18px -13px rgba(0,0,0,0.75);
+  padding: 15px;
+}
+
+.book-content{
+  
+}
+
+.book-display {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*HEADER*/
+.header {
+  color:teal;
+  font-size:1.5rem;
+  font-weight: bold;
+  padding: 20px;
+}
+
+/*BOOKLIST*/
+img {
+  height: 180px;
+}
+
+.books {
+  display: flex;
+  justify-content: space-betwen;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {

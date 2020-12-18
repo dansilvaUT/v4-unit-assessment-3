@@ -28,12 +28,7 @@ class App extends Component {
   }
 
   filterBooks(input) {
-    // let filteredBooks = this.state.books;
-    // filteredBooks.filter((books) => (
-    //   books.title.toLowerCase().includes(input.toLowerCase())
-    // ));
-    // this.setState({ books: filteredBooks });
-    let filteredBooks = this.state.books.filter((book, index) => {
+    let filteredBooks = this.state.books.filter(book => {
       return book.title.toLowerCase().includes(input.toLowerCase())
     })
     this.setState({ books: filteredBooks });
@@ -47,16 +42,22 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <SearchBar
-          searchBooks={this.filterBooks}
-          clear={this.reset} />
-        <BookList
-          books={this.state.books}
-          addBook={this.addToShelf}
-        />
-        <Shelf
-          shelf={this.state.shelf}
-          clearShelf={this.clearShelf} />
+        <section className="app-components">
+          <SearchBar
+            searchBooks={this.filterBooks}
+            clear={this.reset} />
+          <section className="book-content">
+            <section className="book-display">
+              <BookList
+                books={this.state.books}
+                addBook={this.addToShelf}
+              />
+            </section>
+            <Shelf
+              shelf={this.state.shelf}
+              clearShelf={this.clearShelf} />
+          </section>
+        </section>
       </div>
     );
   }
