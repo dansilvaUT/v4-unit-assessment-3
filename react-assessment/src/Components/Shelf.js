@@ -3,9 +3,10 @@ const Shelf = props => {
         <p key={index}>{book}</p>
     ))
     return (
-        <section>
-            {mappedTitles}
+        <section className="shelf">
+            <h3>Your Shelf</h3>
             <button onClick={() => props.clearShelf()}> Clear</button>
+            {mappedTitles}
         </section>
     )
 }

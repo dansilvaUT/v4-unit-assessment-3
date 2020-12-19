@@ -47,12 +47,10 @@ class App extends Component {
             searchBooks={this.filterBooks}
             clear={this.reset} />
           <section className="book-content">
-            <section className="book-display">
               <BookList
                 books={this.state.books}
                 addBook={this.addToShelf}
               />
-            </section>
             <Shelf
               shelf={this.state.shelf}
               clearShelf={this.clearShelf} />

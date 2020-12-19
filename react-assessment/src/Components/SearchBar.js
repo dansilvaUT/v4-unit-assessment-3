@@ -23,7 +23,7 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <section>
+            <section className="search-field">
                 <input value={this.state.input} type="text" onChange={e => { this.handleBookSearch(e) }} />
                 <button onClick={() => this.handleClick()}>search</button>
                 <button onClick={() => this.handleClear()}>clear search</button>
